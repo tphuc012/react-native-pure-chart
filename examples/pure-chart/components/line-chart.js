@@ -291,9 +291,10 @@ class LineChart extends React.Component {
       return null
     }
   }
-
+  scrollToEnd = () => this.scrollChart.scrollToEnd({ animated: false });
   render () {
     let {fadeAnim} = this.state
+    const {RTL} = this.props
     return (
       this.state.sortedData.length > 0 ? (
         <View style={StyleSheet.flatten([styles.wrapper, {
@@ -305,7 +306,10 @@ class LineChart extends React.Component {
           </View>
 
           <View>
-            <ScrollView horizontal>
+            <ScrollView horizontal
+            ref={it => { this.scrollChart = it; }}
+            onContentSizeChange={ RTL ? this.scrollToEnd : undefined }
+            >
               <View>
 
                 <View ref='chartView' style={styles.chartViewWrapper}>
