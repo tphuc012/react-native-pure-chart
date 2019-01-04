@@ -27,12 +27,12 @@ Pure react native chart library that not using svg or ART but only using `react-
 
 
 ```bash
-yarn add react-native-pure-chart
+yarn add react-native-pure-chart@tphuc012/react-native-pure-chart
 ```
 
 Alternatively with npm:
 ```bash
-npm install react-native-pure-chart --save
+npm install react-native-pure-chart@tphuc012/react-native-pure-chart --save
 ```
 ## Required
 ```js
