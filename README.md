@@ -110,7 +110,7 @@ render(
       color: 'yellow'
     }
   ]
-  <PureChart data={sampleData} type='line' />
+  <PureChart data={sampleData} type='line' RTL={true}/>
   ...
 );
 ```
@@ -146,6 +146,11 @@ type of chart. ['line' | 'bar' | 'pie'] is now available
 
 ##### `height`: number
 height of chart
+
+
+##### `RTL`: boolean
+support Right To Left at line chart!
+
 
 ##### `data`: array
 data for chart 
